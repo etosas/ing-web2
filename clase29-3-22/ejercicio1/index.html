@@ -1,0 +1,91 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  
+    <form action="//" id="formulario">
+        <div>
+            <label for="apellido">Apellido</label>
+            <input type="text" name="apellido" id="apellido">
+            <label for="apellido" id="lbl_apellido"></label>
+
+        </div>
+        
+        <div>
+            <label for="nombre">Nombre</label>
+            <input type="text" name="nombre" id="nombre">
+            <label for="nombre"></label>
+        </div>
+        
+        <div>
+            <label for="edad">Edad</label>
+            <input type="number" name="edad" id="edad">
+            <label for="edad"></label>
+        </div>
+
+        <div>
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email">
+            <label for="email"></label>
+        </div>
+        
+        <div>
+            <label for="dni">DNI</label>
+            <input type="text" name="dni" id="dni">
+            <label for="dni"></label>
+        </div>
+        <div>
+            <label for="telefono">Telefono</label>
+            <input type="text" name="telefono" id="telefono">
+            <label for="telefono"></label>
+        </div>
+        
+        <div>
+
+            <input type="checkbox" name="baseDeDatos" id="">
+            <label for="baseDeDatos">Base De Datos</label>
+            <input type="checkbox" name="programacion" id="">
+            <label for="programacion">Programacion</label>
+            <input type="checkbox" name="redes" id="">
+            <label for="redes">Redes</label>
+            <input type="checkbox" name="otra" id="">
+            <label for="otra">Otra</label>
+        </div>
+
+        <input type="submit" value="Enviar">
+        
+    </form>
+
+    <script>
+    /*
+        let objeto = document.getElementById("parrafo");
+        alert('El estilo del componente '+objeto+' es '+ objeto.getAttribute('style'));
+        objeto.setAttribute("style","background-color: blue;")
+        objeto.innerHTML="hola mundo"
+
+        let alumnos = document.getElementsByName("alumno")
+
+        alumnos.forEach(alumno=>alert(alumno))
+
+*/
+    function validar(event) {
+        event.preventDefault() 
+        let apellido = document.getElementById("apellido")
+        if(!(apellido.value.length >= 7)){
+            let label = document.getElementById("lbl_apellido");
+            label.innerText = "Este campo es obligatorio y min 7 caracteres"
+            console.log(label)
+        }else{
+            let label = document.getElementById("lbl_apellido");
+            label.innerText = ""
+        }
+        console.log(apellido) 
+    }
+    document.getElementById("formulario").addEventListener('submit', validar);
+    </script>
+</body>
+</html>
