@@ -8,15 +8,25 @@
     <style>
         .center{
             display: grid;
-            place-items: center;
+            /*align-items:center;
+            justify-content:center;
+            height:25%;
+            width: 15%;*/
+            align-items: center;
+            justify-items: center;
+            
 
         }
+       
+       
         #circle span{
+            
             position: absolute;
-            top:25%;
+            left: 25%;
+            top:50%;
             font-family: Arial, Helvetica, sans-serif;
-            height:25%;
-            width: 15%;
+            height:50%;
+            width: 50%;
             text-align:center;
             transform-origin:bottom center;
         }
@@ -35,8 +45,8 @@
 
         for (let i = 0; i < circleArray.length; i++) {
             const element = circleArray[i];
-
-            circle.innerHTML += `<span style="transform:rotate(${(i+1)*9.65}deg)">${element}</span>`;
+//9.65
+            circle.innerHTML += `<span style="transform:rotate(${(i+360)*9.7}deg)">${element}</span>`;
         }
     </script>
 </body>
