@@ -1,0 +1,43 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ingenieria Web 2</title>
+
+    <style>
+        .center{
+            display: grid;
+            place-items: center;
+
+        }
+        #circle span{
+            position: absolute;
+            top:25%;
+            font-family: Arial, Helvetica, sans-serif;
+            height:25%;
+            width: 15%;
+            text-align:center;
+            transform-origin:bottom center;
+        }
+    </style>
+</head>
+<body>
+    <div class="center">
+        <h1 id="circle">-INGENIERIA WEB 2-HTML CSS JAVASCRITP</h1>
+    </div>
+    <script>
+        let circle = document.getElementById("circle");
+        let circleArray = circle.textContent.split('');
+
+
+        circle.textContent = ''
+
+        for (let i = 0; i < circleArray.length; i++) {
+            const element = circleArray[i];
+
+            circle.innerHTML += `<span style="transform:rotate(${(i+1)*9.65}deg)">${element}</span>`;
+        }
+    </script>
+</body>
+</html>
