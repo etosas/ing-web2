@@ -1,4 +1,4 @@
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,8 +12,7 @@
             justify-items: center;
             visibility:hidden
         }
-        
-       
+ 
         #circle span{
             
             font-family: Arial, Helvetica, sans-serif;
@@ -30,16 +29,42 @@
         @media (min-width: 320px) {
             .center{
                 visibility: visible;
+                
             }
 	        #circle span{
                 font-size: 0.8em;
-                left: 50%;
+                left: 48.71%;
                 top:25%;
-                height:135px;
+                height:200px;
                 width: 35px;
                 
             }
         }
+
+        
+        @media (min-width: 576px) { 
+
+        }
+
+        @media (min-width: 768px) { 
+
+        }
+
+
+        @media (min-width: 992px) { 
+
+        }
+
+
+        @media (min-width: 1200px) { 
+
+        }
+
+
+        @media (min-width: 1400px) { 
+
+        }
+
     </style>
 </head>
 <body>
@@ -55,7 +80,7 @@
 
         for (let i = 0; i < circleArray.length; i++) {
             const element = circleArray[i];
-//9.65
+
             circle.innerHTML += `<span style="transform:rotate(${(i+360)*9.7}deg)">${element}</span>`;
         }
     </script>
